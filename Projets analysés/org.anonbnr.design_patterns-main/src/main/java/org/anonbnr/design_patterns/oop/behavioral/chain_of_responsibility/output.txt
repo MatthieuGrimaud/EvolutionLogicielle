@@ -1,6 +1,0 @@
-StandardConsole: This is a standard information
-File errors.log: This is a debug level information
-StandardConsole: This is a debug level information
-StandardError: This is an error level information
-File errors.log: This is an error level information
-StandardConsole: This is an error level information

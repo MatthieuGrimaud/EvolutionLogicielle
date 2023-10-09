@@ -1,7 +1,0 @@
-Football game initialized! Start playing.
-Football game started. Enjoy the game!
-Football game finished!
-
-Basketball game initialized! Start playing.
-Basketball game started. Enjoy the game!
-Basketball game finished!

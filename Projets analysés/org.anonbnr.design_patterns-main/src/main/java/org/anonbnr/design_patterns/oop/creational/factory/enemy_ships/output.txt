@@ -1,5 +1,0 @@
-What type of enemy ships do you wish to create ? (U/R/B)
-B
-Big UFO Enemy Ship is on the screen
-Big UFO Enemy Ship is following the hero
-Big UFO Enemy Ship attacks and does 40.0 damage
