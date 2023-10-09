@@ -1,0 +1,47 @@
+Aiwa is now On.
+Channel: 1
+Channel: 2
+Channel: 3
+Channel: 2
+Volume: 1
+Volume: 2
+Volume: 3
+Volume: 4
+Volume: 3
+Volume: 2
+Aiwa is now Off.
+
+Sony is now On.
+Channel: 1
+Channel: 2
+Channel: 3
+Channel: 2
+Volume: 1
+Volume: 2
+Volume: 3
+Volume: 4
+Volume: 3
+Volume: 2
+Sony is now Off.
+
+Sony is now On.
+Channel: 3
+Channel: 4
+Channel: 3
+Volume: 3
+Volume: 4
+Volume: 5
+Volume: 4
+Sony is muted. Volume: 0
+Sony is now Off.
+
+Aiwa is now On.
+Channel: 3
+Channel: 4
+Channel: 3
+Volume: 3
+Volume: 4
+Volume: 5
+Volume: 4
+Aiwa is muted. Volume: 0
+Aiwa is now Off.

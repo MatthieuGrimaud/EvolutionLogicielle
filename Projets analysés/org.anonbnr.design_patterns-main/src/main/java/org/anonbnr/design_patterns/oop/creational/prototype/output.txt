@@ -1,0 +1,15 @@
+The contents of the prototype manager's registry
+[id = 1, type = Circle, position = [x = 1.0, y = 1.0, hash = 1510467688],
+hash = 1995265320]
+[id = 2, type = Triangle, position = [x = 2.0, y = 2.0, hash = 746292446],
+hash = 1072591677]
+[id = 3, type = Rectangle, position = [x = 3.0, y = 3.0, hash = 1523554304],
+hash = 1175962212]
+
+The cloned and modified shapes
+[id = 1, type = Circle, position = [x = -1.0, y = 1.0,
+hash = 918221580], hash = 2055281021]
+[id = 2, type = Triangle, position = [x = 2.0, y = 0.0,
+hash = 1554547125], hash = 617901222]
+[id = 3, type = Rectangle, position = [x = 100.0, y = 3.0,
+hash = 1159190947], hash = 925858445]

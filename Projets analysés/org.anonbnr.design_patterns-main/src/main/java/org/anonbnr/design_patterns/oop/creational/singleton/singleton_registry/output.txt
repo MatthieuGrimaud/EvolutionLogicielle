@@ -1,0 +1,3 @@
+singleton1 = sameSingleton1 : true
+singleton2 = sameSingleton2 : true
+singleton1 = singleton2 : false

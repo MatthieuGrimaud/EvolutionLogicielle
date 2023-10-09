@@ -1,0 +1,111 @@
+Bank Accounts
+=============
+BankAccount [number=1, credit=50.0]
+BankAccount [number=2, credit=100.0]
+BankAccount [number=3, credit=250.0]
+BankAccount [number=4, credit=200.0]
+BankAccount [number=5, credit=500.0]
+BankAccount [number=6, credit=10.0]
+BankAccount [number=7, credit=1000.0]
+BankAccount [number=8, credit=1500.0]
+BankAccount [number=9, credit=800.0]
+BankAccount [number=10, credit=700.0]
+
+Customers
+=========
+Customer [number=1, firstName=John, lastName=Doe]
+Customer [number=2, firstName=Jane, lastName=Doe]
+Customer [number=3, firstName=Tom, lastName=Cruise]
+Customer [number=4, firstName=John, lastName=Cena]
+Customer [number=5, firstName=Keanu, lastName=Reeves]
+Customer [number=6, firstName=Angelina, lastName=Jolie]
+Customer [number=7, firstName=Keira, lastName=Knightley]
+Customer [number=8, firstName=Johnny, lastName=Depp]
+Customer [number=9, firstName=Brad, lastName=Pit]
+Customer [number=10, firstName=Jessica, lastName=Alba]
+
+Getting customer having ID 1
+Customer [number=1, firstName=John, lastName=Doe]
+
+Getting bank having Number 3
+BankAccount [number=3, credit=250.0]
+
+Successfully updated customer with ID: 1
+Customer [number=1, firstName=John, lastName=Doe]
+Accounts:
+BankAccount [number=3, credit=250.0]
+
+
+Successfully created BankAccount [number=11, credit=1200.0]
+
+Successfully created Customer [number=11, firstName=John, lastName=Travolta]
+Accounts:
+BankAccount [number=11, credit=1200.0]
+
+
+Bank Accounts
+=============
+BankAccount [number=1, credit=50.0]
+BankAccount [number=2, credit=100.0]
+BankAccount [number=3, credit=250.0]
+BankAccount [number=4, credit=200.0]
+BankAccount [number=5, credit=500.0]
+BankAccount [number=6, credit=10.0]
+BankAccount [number=7, credit=1000.0]
+BankAccount [number=8, credit=1500.0]
+BankAccount [number=9, credit=800.0]
+BankAccount [number=10, credit=700.0]
+BankAccount [number=11, credit=1200.0]
+
+Customers
+=========
+Customer [number=1, firstName=John, lastName=Doe]
+Accounts:
+BankAccount [number=3, credit=250.0]
+
+Customer [number=2, firstName=Jane, lastName=Doe]
+Customer [number=3, firstName=Tom, lastName=Cruise]
+Customer [number=4, firstName=John, lastName=Cena]
+Customer [number=5, firstName=Keanu, lastName=Reeves]
+Customer [number=6, firstName=Angelina, lastName=Jolie]
+Customer [number=7, firstName=Keira, lastName=Knightley]
+Customer [number=8, firstName=Johnny, lastName=Depp]
+Customer [number=9, firstName=Brad, lastName=Pit]
+Customer [number=10, firstName=Jessica, lastName=Alba]
+Customer [number=11, firstName=John, lastName=Travolta]
+Accounts:
+BankAccount [number=11, credit=1200.0]
+
+
+Successfully removed bank account with ID: 11
+Successfully removed customer with ID: 11
+
+Bank Accounts
+=============
+BankAccount [number=1, credit=50.0]
+BankAccount [number=2, credit=100.0]
+BankAccount [number=3, credit=250.0]
+BankAccount [number=4, credit=200.0]
+BankAccount [number=5, credit=500.0]
+BankAccount [number=6, credit=10.0]
+BankAccount [number=7, credit=1000.0]
+BankAccount [number=8, credit=1500.0]
+BankAccount [number=9, credit=800.0]
+BankAccount [number=10, credit=700.0]
+
+Customers
+=========
+Customer [number=1, firstName=John, lastName=Doe]
+Accounts:
+BankAccount [number=3, credit=250.0]
+
+Customer [number=2, firstName=Jane, lastName=Doe]
+Customer [number=3, firstName=Tom, lastName=Cruise]
+Customer [number=4, firstName=John, lastName=Cena]
+Customer [number=5, firstName=Keanu, lastName=Reeves]
+Customer [number=6, firstName=Angelina, lastName=Jolie]
+Customer [number=7, firstName=Keira, lastName=Knightley]
+Customer [number=8, firstName=Johnny, lastName=Depp]
+Customer [number=9, firstName=Brad, lastName=Pit]
+Customer [number=10, firstName=Jessica, lastName=Alba]
+

@@ -1,0 +1,14 @@
+Please enter a PIN
+Card Ejected
+Please enter a PIN
+Wrong PIN
+Card Ejected
+Please enter a PIN
+Correct PIN
+Not enough cash to complete this transaction
+Card Ejected
+Please enter a PIN
+Correct PIN
+2000 is provided by the machine
+Card Ejected
+No cash in the machine
