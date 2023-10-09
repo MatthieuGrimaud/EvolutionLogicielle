@@ -1,0 +1,25 @@
+Creating Circle of color Black
+Circle=[color=Black, radius=2, position=(87.0, 47.0)]
+Creating Circle of color Blue
+Circle=[color=Blue, radius=60, position=(48.0, 39.0)]
+Creating Circle of color White
+Circle=[color=White, radius=4, position=(68.0, 95.0)]
+Creating Circle of color Green
+Circle=[color=Green, radius=49, position=(86.0, 59.0)]
+Circle=[color=Green, radius=48, position=(60.0, 13.0)]
+Circle=[color=Blue, radius=90, position=(45.0, 47.0)]
+Circle=[color=Blue, radius=82, position=(70.0, 1.0)]
+Circle=[color=Black, radius=27, position=(66.0, 41.0)]
+Circle=[color=Black, radius=75, position=(49.0, 9.0)]
+Circle=[color=White, radius=88, position=(61.0, 58.0)]
+Circle=[color=Green, radius=0, position=(40.0, 8.0)]
+Creating Circle of color Red
+Circle=[color=Red, radius=36, position=(71.0, 91.0)]
+Circle=[color=White, radius=97, position=(40.0, 37.0)]
+Circle=[color=White, radius=90, position=(80.0, 62.0)]
+Circle=[color=White, radius=22, position=(54.0, 28.0)]
+Circle=[color=White, radius=87, position=(55.0, 81.0)]
+Circle=[color=Black, radius=25, position=(27.0, 47.0)]
+Circle=[color=Red, radius=13, position=(50.0, 59.0)]
+Circle=[color=White, radius=14, position=(62.0, 42.0)]
+Circle=[color=Black, radius=37, position=(9.0, 76.0)]

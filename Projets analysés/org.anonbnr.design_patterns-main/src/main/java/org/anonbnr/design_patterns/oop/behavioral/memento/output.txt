@@ -1,0 +1,3 @@
+Originator's current state: State 4
+Originator's first saved state: State 2
+Originator's second saved state: State 3

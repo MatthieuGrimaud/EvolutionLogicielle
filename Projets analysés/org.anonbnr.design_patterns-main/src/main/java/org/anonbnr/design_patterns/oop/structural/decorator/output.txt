@@ -1,0 +1,25 @@
+Beverages
+--------------
+1. <E>: Espresso
+2. <T>: Tea
+E
+Additional Ingredients
+----------------------------
+1. <C>: Caramel
+2. <S>: Sugar
+3. <Enter>: when done
+C
+Additional Ingredients
+----------------------------
+1. <C>: Caramel
+2. <S>: Sugar
+3. <Enter>: when done
+S
+Additional Ingredients
+----------------------------
+1. <C>: Caramel
+2. <S>: Sugar
+3. <Enter>: when done
+
+Your order is: Espresso, with Caramel, containing Sugar
+Total cost: 3.5

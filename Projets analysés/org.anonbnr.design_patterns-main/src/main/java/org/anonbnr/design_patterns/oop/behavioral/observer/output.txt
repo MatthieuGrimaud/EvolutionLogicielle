@@ -1,0 +1,60 @@
+Observer 1
+IBM: 197.0
+Apple: 0.0
+Google: 0.0
+
+Observer 1
+IBM: 197.0
+Apple: 677.6
+Google: 0.0
+
+Observer 1
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 1
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 2
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 1
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 2
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 1
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 2
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 1 deleted
+Observer 2
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 2
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
+
+Observer 2
+IBM: 197.0
+Apple: 677.6
+Google: 676.4
