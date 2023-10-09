@@ -7,10 +7,12 @@ public class TypeDeclarationVisitor extends ASTVisitor {
 	private int cpt = 0;
 
 	public boolean visit(TypeDeclaration node) {
-		// System.out.println("Nom de la classe : " + node.getName().getIdentifier());
-		cpt++;
+		if (!node.isInterface()) {
+			cpt++;
+		}
 		return super.visit(node);
 	}
+
 
 	public int getCount() {
 		return cpt;

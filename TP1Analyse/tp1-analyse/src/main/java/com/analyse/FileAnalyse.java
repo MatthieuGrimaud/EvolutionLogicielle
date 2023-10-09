@@ -23,6 +23,9 @@ import com.parser.Parser;
 import com.visitors.LinesByMethodVisitor;
 
 public class FileAnalyse {
+	
+	public FileAnalyse() {
+	}
 	public FileAnalyse(ArrayList<File> javaFiles) {
 	}
 
@@ -35,7 +38,6 @@ public class FileAnalyse {
 				content = FileUtils.readFileToString(javaFile, "UTF-8");
 				CompilationUnit cu = Parser.parse(content.toCharArray());
 
-				// Compter les définitions de classes dans cet AST
 				cptClasses += ASTBasique.nbTypeDeclaration(cu);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -52,11 +54,9 @@ public class FileAnalyse {
 
 		for (File javaFile : javaFiles) {
 			try {
-				// compter les lignes
 				List<String> lines = FileUtils.readLines(javaFile, "UTF-8");
 				nombreTotalLignes += lines.size();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -73,10 +73,8 @@ public class FileAnalyse {
 				content = FileUtils.readFileToString(javaFile, "UTF-8");
 				CompilationUnit cu = Parser.parse(content.toCharArray());
 
-				// Compter les définitions de méthodes dans cet AST
 				cptMethodes += ASTBasique.nbMethodDeclaration(cu);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -134,7 +132,6 @@ public class FileAnalyse {
 				content = FileUtils.readFileToString(javaFile, "UTF-8");
 				CompilationUnit cu = Parser.parse(content.toCharArray());
 
-				// Compter les lignes à l'intérieur des méthodes dans cet AST
 				cptLignes += nblignesParMethodes(cu, content);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -163,8 +160,7 @@ public class FileAnalyse {
 			try {
 				content = FileUtils.readFileToString(javaFile, "UTF-8");
 				CompilationUnit cu = Parser.parse(content.toCharArray());
-
-				// Compter les attributs dans cet AST
+				
 				cptAttributs += ASTBasique.nbFieldDeclaration(cu);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -202,7 +198,6 @@ public class FileAnalyse {
 					}
 				});
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -217,7 +212,6 @@ public class FileAnalyse {
 
 		List<Map.Entry<String, Integer>> entries = new ArrayList<>(methodesParClasse.entrySet());
 
-		// Trie les classes par leur nombre de méthodes (ordre décroissant)
 		Collections.sort(entries, (e1, e2) -> e2.getValue().compareTo(e1.getValue()));
 
 		// Récupère le 10% supérieur
@@ -244,7 +238,6 @@ public class FileAnalyse {
 					}
 				});
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -259,7 +252,6 @@ public class FileAnalyse {
 
 		List<Map.Entry<String, Integer>> entries = new ArrayList<>(attributsParClasse.entrySet());
 
-		// Trie les classes par leur nombre de méthodes (ordre décroissant)
 		Collections.sort(entries, (e1, e2) -> e2.getValue().compareTo(e1.getValue()));
 
 		// Récupère le 10% supérieur
@@ -272,7 +264,6 @@ public class FileAnalyse {
 		List<String> topClassesMethodes = top10PourcentClassePlusDeMethodes(javaFiles);
 		List<String> topClassesAttributs = top10PourcentClassePlusAttributs(javaFiles);
 
-		// Intersection des deux listes
 		topClassesMethodes.retainAll(topClassesAttributs);
 
 		return topClassesMethodes;
@@ -308,7 +299,7 @@ public class FileAnalyse {
 	// Question 13 : Le nombre maximal de paramètres par rapport à toutes les
 	// m"thodes de l'application
 	public int nombreMaximalParametres(ArrayList<File> javaFiles) {
-		int[] maxParametres = { 0 }; // Utilisez un tableau
+		int[] maxParametres = { 0 };
 
 		for (File javaFile : javaFiles) {
 			try {
@@ -318,7 +309,7 @@ public class FileAnalyse {
 					public boolean visit(MethodDeclaration node) {
 						int nombreParametres = node.parameters().size();
 						if (nombreParametres > maxParametres[0]) {
-							maxParametres[0] = nombreParametres; // Modifiez l'élément du tableau
+							maxParametres[0] = nombreParametres;
 						}
 						return super.visit(node);
 					}
@@ -327,7 +318,46 @@ public class FileAnalyse {
 				e.printStackTrace();
 			}
 		}
-		return maxParametres[0]; // Retournez l'élément du tableau
+		return maxParametres[0];
+	}
+	
+	/*public String afficherAnalyse(String projectSourcePath) {
+        StringBuilder results = new StringBuilder();
+
+        ArrayList<File> javaFiles = Parser.listJavaFilesForFolder(new File(projectSourcePath));
+        results.append("1. Nombre total de classes : ").append(nombreTotalClasses(javaFiles)).append("\n\n");
+        results.append("2. Nombre total de lignes : ").append(nombreTotalLignes(javaFiles)).append("\n\n");
+        results.append("3. Nombre total de méthodes : " + nombreTotalMethodes(javaFiles)).append("\n\n");;
+        results.append("4. Nombre total de packages : " + nombreTotalPackages(javaFiles)).append("\n\n");;
+        results.append("5. Nombre moyen de méthodes par classe : " + nombreMoyenMethodesParClasse(javaFiles)).append("\n\n");;
+        results.append("6. Nombre moyen de lignes par méthode : " + nombreMoyenLignesParMethode(javaFiles)).append("\n\n");;
+        results.append("7. Nombre moyen d'attributs par classe : " + nombreMoyenAttributsParClasse(javaFiles)).append("\n\n");;
+        results.append("8. 10% des classes possédant le plus de méthodes : " + top10PourcentClassePlusDeMethodes(javaFiles)).append("\n\n");;
+        results.append("9. 10% des classes possédant le plus d'attributs : " + top10PourcentClassePlusAttributs(javaFiles)).append("\n\n");;
+        results.append("10. Classes faisant partie en même temps des deux catégories précédentes : " + classesDansLesDeuxCategories(javaFiles)).append("\n\n");;
+        results.append("13. Nombre maximal de paramètres par rapport à toutes les méthodes de l'application : "+ nombreMaximalParametres(javaFiles)).append("\n\n");;
+       
+
+        return results.toString();
+    }*/
+	
+	// Dans FileAnalyse
+	public ArrayList<String> afficherAnalyse(String projectSourcePath) {
+	    ArrayList<String> results = new ArrayList<>();
+	    ArrayList<File> javaFiles = Parser.listJavaFilesForFolder(new File(projectSourcePath));
+	    
+	    results.add("1. Nombre total de classes : " + nombreTotalClasses(javaFiles) + "\n\n");
+        results.add("2. Nombre total de lignes : " + nombreTotalLignes(javaFiles) + "\n\n");
+        results.add("3. Nombre total de méthodes : " + nombreTotalMethodes(javaFiles) +"\n\n");;
+        results.add("4. Nombre total de packages : " + nombreTotalPackages(javaFiles) + "\n\n");;
+        results.add("5. Nombre moyen de méthodes par classe : " + nombreMoyenMethodesParClasse(javaFiles) + "\n\n");;
+        results.add("6. Nombre moyen de lignes par méthode : " + nombreMoyenLignesParMethode(javaFiles) + "\n\n");;
+        results.add("7. Nombre moyen d'attributs par classe : " + nombreMoyenAttributsParClasse(javaFiles) + "\n\n");;
+        results.add("8. 10% des classes possédant le plus de méthodes : " + top10PourcentClassePlusDeMethodes(javaFiles) + "\n\n");
+        results.add("9. 10% des classes possédant le plus d'attributs : " + top10PourcentClassePlusAttributs(javaFiles) + "\n\n");
+        results.add("10. Classes faisant partie en même temps des deux catégories précédentes : " + classesDansLesDeuxCategories(javaFiles) + "\n\n");
+        results.add("\n13. Nombre maximal de paramètres par rapport à toutes les méthodes de l'application : "+ nombreMaximalParametres(javaFiles) + "\n\n");
+	    return results;
 	}
 
 }

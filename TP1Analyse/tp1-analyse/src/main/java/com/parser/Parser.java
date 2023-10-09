@@ -10,11 +10,11 @@ import org.eclipse.jdt.core.dom.CompilationUnit;
 
 public class Parser {
 
+	//mettre chemin du fichier souhaité
+	public final static String projectPath = "C:\\Users\\ASUS\\ew\\AgenceRESTService";
+	public final static String projectSourcePath = projectPath + "\\src";
+
 	/*
-	 * public final static String projectPath =
-	 * "C:\\Users\\ASUS\\ew\\AgenceRESTService"; public final static String
-	 * projectSourcePath = projectPath + "\\src"; // Modifiez cela si nécessaire
-	 * 
 	 * public static ArrayList<File> listJavaFilesForFolder(final File folder) {
 	 * ArrayList<File> javaFiles = new ArrayList<>(); for (File fileEntry :
 	 * folder.listFiles()) { if (fileEntry.isDirectory()) {
